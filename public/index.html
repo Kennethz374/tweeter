@@ -7,6 +7,20 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
+
+    <!-- NAV CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- HEADER CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- NEW-TWEET CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- TWEET CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -15,6 +29,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+     <!-- Composer-char-counter JS -->
+     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -35,7 +53,25 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main id="tweet-container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+            <form method="POST" action="/tweets">
+              <textarea name="text" placeholder="What are you humming about?"></textarea>
+                <input id="addTweet" type="submit" value="Tweet">
+                  <span class="counter">140</span>
+                    </form>
+                </section>
+                <article class="tweet">
+                    <img class="picture" src="https://i.imgur.com/73hZDYK.png">
+                    <label class="name">Newton</label>
+                    <label class="handle">@SirIsaac</label>
+                    <textarea class="content">If I have seen further it is by standing on the shoulders of giants
+                     </textarea>
+                    <footer></footer>
+                    <div class="timeLast">10 days ago</div>
+                    <div class="reportRefreshLike">🚩🔄❤️</div>
+                  </article>
     </main>
 
   </body>
