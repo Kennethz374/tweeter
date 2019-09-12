@@ -98,16 +98,22 @@ const renderTweets = function(tweets) {
   }
 
 }
+//------XCC-----
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 //RETURN A DOM NODE OF A GIVEN TWEET DATA
 const createTweetElement = function(tweetData) {
 let $tweet = $(`<article class="tweet">
-<img class="picture" src= ${tweetData.user.avatars}>
-<label class="name">${tweetData.user.name}</label>
-<label class="handle">${tweetData.user.handle}</label>
-<textarea class="content">${tweetData.content.text}
+<img class="picture" src= ${escape(tweetData.user.avatars)}>
+<label class="name">${escape(tweetData.user.name)}</label>
+<label class="handle">${escape(tweetData.user.handle)}</label>
+<textarea class="content">${escape(tweetData.content.text)}
  </textarea>
 <footer></footer>
-<div class="timeLast">${timeHelper(Date.now() - tweetData.created_at)} </div>
+<div class="timeLast">${escape(timeHelper(Date.now() - tweetData.created_at))} </div>
 <div class="reportRefreshLike">🚩🔄❤️</div>
 </article> `)
 return $tweet;
@@ -120,8 +126,9 @@ form.on("submit", (event) => {
   event.preventDefault();
   let msgLength = $("#inputContent").val().length;
   if(msgLength > 140||msgLength === 0) {
-    alert("Message Cannot be empty or longer than 140 characters");
+      $("#error").slideDown();
   } else {
+      $("#error").hide();
     $.ajax({
       url: "/tweets",
       method: "POST",

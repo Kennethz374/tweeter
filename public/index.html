@@ -63,6 +63,7 @@
     <!-- Page-specific (main) content here -->
     <main id="tweet-container">
         <section class="new-tweet">
+          <div id="error">Sorry! Input Content cannot be empty or more than 140 characters</div>
             <form method="POST" action="/tweets">
               <textarea id="inputContent" name="text" placeholder="What are you humming about?"></textarea>
                 <input id="addTweet" type="submit" value="Tweet">

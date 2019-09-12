@@ -36,4 +36,9 @@ input {
   color: #ffffff;
 }
 
-
+#error {
+  display:none;
+  text-align: center;
+  border: 3px solid red;
+  margin:25px;
+}
