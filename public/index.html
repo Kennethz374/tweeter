@@ -33,6 +33,10 @@
      <!-- Composer-char-counter JS -->
      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+     <!-- Toggle Function JS -->
+     <script type="text/javascript" src="/scripts/toggle.js"></script>
+
+
   </head>
 
   <body>
@@ -40,6 +44,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <button id="toggle"><strong>Write</strong> a New Tweet 
+        <br/> ⬇
+      
+      </button>
     </nav>
 
     <header>
@@ -55,7 +63,6 @@
     <!-- Page-specific (main) content here -->
     <main id="tweet-container">
         <section class="new-tweet">
-          <h2>Compose Tweet</h2>
             <form method="POST" action="/tweets">
               <textarea id="inputContent" name="text" placeholder="What are you humming about?"></textarea>
                 <input id="addTweet" type="submit" value="Tweet">

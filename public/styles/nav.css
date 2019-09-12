@@ -21,3 +21,12 @@ nav {
   padding: 1.5em;
   top: 0px;
 }
+
+#toggle {
+  font-size: 1rem;
+  font-family: "Source san serif";
+  float: right;
+  background-color: #4056A1;
+  border:none;
+  outline:none;
+}

@@ -94,7 +94,7 @@ const renderTweets = function(tweets) {
     // calls createTweetElement for each tweet
     let value = createTweetElement(user);
     // takes return value and appends it to the tweets container
-    $("#tweet-list").append(value);
+    $("#tweet-list").prepend(value);
   }
 
 }
@@ -141,4 +141,5 @@ form.on("submit", (event) => {
   }
 
 })
+
 });
