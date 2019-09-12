@@ -27,6 +27,7 @@ textarea {
   background-color: #f4f1ec;
   margin-bottom: 10px;
   padding: 10px;
+  outline:none;
 }
 
 input {

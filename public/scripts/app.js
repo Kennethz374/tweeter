@@ -128,7 +128,7 @@ form.on("submit", (event) => {
   if(msgLength > 140||msgLength === 0) {
       $("#error").slideDown();
   } else {
-      $("#error").hide();
+      $("#error").slideUp();
     $.ajax({
       url: "/tweets",
       method: "POST",

@@ -49,6 +49,7 @@ article img {
 }
 
 .reportRefreshLike {
+  width:100px;
   position: relative;
   left: 85%;
   bottom:10%;

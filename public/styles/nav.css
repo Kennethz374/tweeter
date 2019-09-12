@@ -29,3 +29,18 @@ nav {
   border:none;
   outline:none;
 }
+
+.arrow {
+  width:30px;
+  height:30px;
+}
+
+#composer {
+  position: fixed;
+  right:5%;
+  bottom:5%;
+  background-color: red;
+  display:none;
+  border-radius: 50px;
+  cursor:pointer;
+}
