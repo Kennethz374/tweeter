@@ -84,32 +84,21 @@ const data = [
       "text": "Je pense , donc je suis"
     },
     "created_at": 1561113959088
-  },
-  {
-    "user": {
-      "name": "Ken",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Hello, I m just testing the page with a lot of text in the textarea...."
-    },
-    "created_at": 1561113959088
   }
-
 ]
 
 const renderTweets = function(tweets) {
+
 // loops through tweets
   for(const user of tweets) {
     // calls createTweetElement for each tweet
     let value = createTweetElement(user);
-    console.log(user);
     // takes return value and appends it to the tweets container
-    $("#tweet-container").append(value);
+    $("#tweet-list").append(value);
   }
 
 }
-
+//RETURN A DOM NODE OF A GIVEN TWEET DATA
 const createTweetElement = function(tweetData) {
 let $tweet = $(`<article class="tweet">
 <img class="picture" src= ${tweetData.user.avatars}>
@@ -126,6 +115,30 @@ return $tweet;
 
 renderTweets(data);
 
+const form = $("form");
+form.on("submit", (event) => {
+  event.preventDefault();
+  let msgLength = $("#inputContent").val().length;
+  if(msgLength > 140||msgLength === 0) {
+    alert("Message Cannot be empty or longer than 140 characters");
+  } else {
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: form.serialize()
+    }).then(()=>{
+      $("#inputContent").val("");
+      loadTweets();
+    })
+  
+  
+    const loadTweets = function (){
+      $.get("/tweets", (data)=>{
+        $('#tweet-list').empty();
+        renderTweets(data);
+      })
+    }
+  }
 
-
+})
 });

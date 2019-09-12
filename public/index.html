@@ -57,12 +57,13 @@
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
             <form method="POST" action="/tweets">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
+              <textarea id="inputContent" name="text" placeholder="What are you humming about?"></textarea>
                 <input id="addTweet" type="submit" value="Tweet">
                   <span class="counter">140</span>
                     </form>
                 </section>
-                <article class="tweet">
+                <section id="tweet-list"></section>
+                <!-- <article class="tweet">
                     <img class="picture" src="https://i.imgur.com/73hZDYK.png">
                     <label class="name">Newton</label>
                     <label class="handle">@SirIsaac</label>
@@ -71,7 +72,7 @@
                     <footer></footer>
                     <div class="timeLast">10 days ago</div>
                     <div class="reportRefreshLike">🚩🔄❤️</div>
-                  </article>
+                  </article> -->
     </main>
 
   </body>
