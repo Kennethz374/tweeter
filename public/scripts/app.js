@@ -8,20 +8,22 @@
 <div class="timeLast">10 days ago</div>
 <div class="reportRefreshLike">🚩🔄❤️</div>
 </article> */
-
+// const timeHelper = require("./timeHelper").timeHelper;
 const timeHelper = function (ms) {
   if(ms >= 12 * 30 * 24 * 3600000) {
-    return `${Math.floor(ms/(12 * 30 * 24 * 3600000))} years ago`
+    return `${Math.floor(ms/(12 * 30 * 24 * 3600000))} years ago`;
   } else if (ms >= 30 * 24 * 3600000) {
-    return `${Math.floor(ms/(30 * 24 * 3600000))} months ago`
+    return `${Math.floor(ms/(30 * 24 * 3600000))} months ago`;
   } else if (ms >=  (7 * 24 * 3600000)) {
-    return `${Math.floor(ms/(7 * 24 * 3600000))} weeks ago`
+    return `${Math.floor(ms/(7 * 24 * 3600000))} weeks ago`;
   } else if (ms >= 24 * 3600000) {
-    return `${Math.floor(ms/(24 * 3600000))} days ago`
+    return `${Math.floor(ms/(24 * 3600000))} days ago`;
   } else if (ms >= 3600000) {
-    return `${Math.floor(ms/3600000)} hours ago`
+    return `${Math.floor(ms/3600000)} hours ago`;
   } else if (ms >= 60000) {
-    return `${Math.floor(ms/60000)} hours ago`
+    return `${Math.floor(ms/60000)} minutes ago`;
+  } else {
+    return `Just created Now`;
   }
 }
 
@@ -134,7 +136,8 @@ form.on("submit", (event) => {
       method: "POST",
       data: form.serialize()
     }).then(()=>{
-      $("#inputContent").val("");
+      $("#inputContent").val("");//reset input field
+      $(".counter").text("140");//reset counter
       loadTweets();
     })
   

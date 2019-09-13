@@ -11,21 +11,26 @@ The inner content should not be touching the viewport edge on any side and shoul
 
 
 nav {
+  display:block;
   font-family: 'Bungee', cursive;
-  position: fixed;
-  height: 120px;
+  position: sticky;
+  height:120px;
   width: 100%;
-  z-index: 1;
-  background-color: #4056A1;
+  background-color: #e0a100;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   color: #ffffff;
   padding: 1.5em;
   top: 0px;
+  z-index: 1;
 }
+/* * /4056A1 */ 
 
 #toggle {
+  position:fixed;
   font-size: 1rem;
-  float: right;
-  background-color: #4056A1;
+  top:2%;
+  right:0%;
+  background-color:transparent;
   border:none;
   outline:none;
 }
@@ -39,8 +44,7 @@ nav {
   position: fixed;
   right:5%;
   bottom:5%;
-  background-color: red;
-  display:none;
+  background-color: black;
   border-radius: 50px;
   cursor:pointer;
 }

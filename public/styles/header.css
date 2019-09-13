@@ -6,8 +6,8 @@ The background should be a different colour than the nav and the body
 The background-image should be a transparent pattern. Feel free to use this tool 
 to assist: https://www.transparenttextures.com/ */
 
-header {
-  margin-top: 120px;
+.header {
+
   height: 400px;
   width: 100%;
   background-color: #e0a100;
@@ -16,12 +16,12 @@ header {
 
 header div img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:auto;
+  margin-right:auto;
+  padding:15px;
+  position:sticky;
 }
 
 header div h2 {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }

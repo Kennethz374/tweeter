@@ -44,13 +44,11 @@ article img {
 .timeLast {
   font-size: 1rem;
   display: block;
-  position: relative;
-  left: 5%;
+  float:left;
+  padding:1%;
 }
 
 .reportRefreshLike {
   width:100px;
-  position: relative;
-  left: 85%;
-  bottom:10%;
+  float:right;
 }

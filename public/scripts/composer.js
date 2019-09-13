@@ -9,7 +9,6 @@ $(document).ready(function() {
 
   $("#composer").click(function(){
     $(window).scrollTop(0);
-    $("#toggle").attr("enabled");
   });
 
 })

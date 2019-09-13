@@ -1,5 +1,6 @@
 
 const timeHelper = function (ms) {
+  debugger
   if(ms >= 12 * 30 * 24 * 3600000) {
     return `${Math.floor(ms/(12 * 30 * 24 * 3600000))} years ago`
   } else if (ms >= 30 * 24 * 3600000) {
@@ -11,10 +12,10 @@ const timeHelper = function (ms) {
   } else if (ms >= 3600000) {
     return `${Math.floor(ms/3600000)} hours ago`
   } else if (ms >= 60000) {
-    return `${Math.floor(ms/60000)} hours ago`
+    return `${Math.floor(ms/60000)} minutes ago`
   }
 }
-
+module.exports = {timeHelper};
 
 //1 minute = 60000ms
 //1 hour   = 360 0000ms
