@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  $("#toggle").click(function(){
+  $("#toggle").click(function() {
     $(".new-tweet").toggle();
   });
-})
+});
 
