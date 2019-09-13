@@ -17,6 +17,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ##Functionality:
+
 - There is an Create a tweet button on the top-right corner where you can hide or show the textarea
 - There is a back to top button when client scroll down 
 - Counter for maximium 140; exceeded character will result counter to become negative and red;
@@ -25,5 +26,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Added a timer to calculate how long ago the post was created.
 
 ##Screenshot
-![`Screen shot on the Desktop View`] (https://github.com/Kennethz374/tweeter/blob/master/docs/Screen%20Shot%202019-09-13%20at%209.13.07%20AM.png?raw=true)
-![`Screen shot on the mobile and tablet view`] (https://github.com/Kennethz374/tweeter/blob/master/docs/Screen%20Shot%202019-09-13%20at%209.13.56%20AM.png?raw=true)
+
+!["Screen shot on the Desktop View"] (https://github.com/Kennethz374/tweeter/blob/master/docs/Screen%20Shot%202019-09-13%20at%209.13.07%20AM.png?raw=true)
+!["Screen shot on the mobile and tablet view"] (https://github.com/Kennethz374/tweeter/blob/master/docs/Screen%20Shot%202019-09-13%20at%209.13.56%20AM.png?raw=true)
