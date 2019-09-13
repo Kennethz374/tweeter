@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+##Functionality:
+- There is an Create a tweet button on the top-right corner where you can hide or show the textarea
+- There is a back to top button when client scroll down 
+- Counter for maximium 140; exceeded character will result counter to become negative and red;
+- Entering empty and long message over 140 characters will show an error message;
+- Added responsive Design; When go over 1000px, the tweeter will render a different design.
+- Added a timer to calculate how long ago the post was created.
