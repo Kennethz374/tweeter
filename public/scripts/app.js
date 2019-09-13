@@ -17,13 +17,10 @@ const timeHelper = function(ms) {
 };
 //------timeHelper function-------
 $(document).ready(function() {
-  const renderTweets = function(tweets) {
 
-    // loops through tweets
+  const renderTweets = function(tweets) {
     for (const user of tweets) {
-    // calls createTweetElement for each tweet
       let value = createTweetElement(user);
-      // takes return value and appends it to the tweets container
       $("#tweet-list").prepend(value);
     }
 
