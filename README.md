@@ -27,5 +27,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 ##Screenshot
 
-!["Screen shot on the Desktop View"] (https://github.com/Kennethz374/tweeter/blob/master/docs/DesktopView.png?raw=true)
-!["Screen shot on the mobile and tablet view"] (https://github.com/Kennethz374/tweeter/blob/master/docs/mobileView.png?raw=true)
+!["Screen shot on the Desktop View"] (https://github.com/Kennethz374/tweeter/blob/master/docs/DesktopView.png)
+!["Screen shot on the mobile and tablet view"] (https://github.com/Kennethz374/tweeter/blob/master/docs/mobileView.png)
