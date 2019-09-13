@@ -16,7 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
-##Functionality:
+##Functionality
 
 - There is an Create a tweet button on the top-right corner where you can hide or show the textarea
 - There is a back to top button when client scroll down 
@@ -25,7 +25,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Added responsive Design; When go over 1000px, the tweeter will render a different design.
 - Added a timer to calculate how long ago the post was created.
 
-##Screenshot
+##Final Product
 
-!["Screen shot on the Desktop View"] (https://github.com/Kennethz374/tweeter/blob/master/docs/DesktopView.png)
-!["Screen shot on the mobile and tablet view"] (https://github.com/Kennethz374/tweeter/blob/master/docs/mobileView.png)
+!["Screenshot of Desktop View"](https://github.com/Kennethz374/tweeter/blob/master/docs/DesktopView.png)
+!["screenshot of MobileView"](https://github.com/Kennethz374/tweeter/blob/master/docs/mobileView.png)
