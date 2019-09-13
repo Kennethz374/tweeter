@@ -9,6 +9,7 @@ $(document).ready(function() {
 
   $("#composer").click(function() {
     $(window).scrollTop(0);
+    $("#inputConetent").focus();
   });
 
 });

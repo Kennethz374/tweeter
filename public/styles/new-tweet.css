@@ -17,6 +17,10 @@ form {
   margin: 15px;
 }
 
+.new-tweet{
+  display:none;
+}
+
 textarea {
   height: 3.5em;
   display: block;

@@ -1,14 +1,3 @@
-/* <article class="tweet">
-<img class="picture" src="https://i.imgur.com/73hZDYK.png">
-<label class="name">Newton</label>
-<label class="handle">@SirIsaac</label>
-<textarea class="content">If I have seen further it is by standing on the shoulders of giants
- </textarea>
-<footer></footer>
-<div class="timeLast">10 days ago</div>
-<div class="reportRefreshLike">🚩🔄❤️</div>
-</article> */
-// const timeHelper = require("./timeHelper").timeHelper;
 const timeHelper = function(ms) {
   if (ms >= 12 * 30 * 24 * 3600000) {
     return `${Math.floor(ms / (12 * 30 * 24 * 3600000))} years ago`;
@@ -26,31 +15,8 @@ const timeHelper = function(ms) {
     return `Just created Now`;
   }
 };
-
+//------timeHelper function-------
 $(document).ready(function() {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1561113959088
-    }];
-
   const renderTweets = function(tweets) {
 
     // loops through tweets
@@ -76,14 +42,20 @@ $(document).ready(function() {
 <label class="handle">${escape(tweetData.user.handle)}</label>
 <textarea class="content">${escape(tweetData.content.text)}
  </textarea>
-<footer></footer>
+<footer>
 <div class="timeLast">${escape(timeHelper(Date.now() - tweetData.created_at))} </div>
 <div class="reportRefreshLike">🚩🔄❤️</div>
+</footer>
 </article> `);
     return $tweet;
   };
 
-  renderTweets(data);
+  const loadTweets = function() {
+    $.get("/tweets", (data)=>{
+      $('#tweet-list').empty();
+      renderTweets(data);
+    });
+  };
 
   const form = $("form");
   form.on("submit", (event) => {
@@ -102,16 +74,10 @@ $(document).ready(function() {
         $(".counter").text("140");//reset counter
         loadTweets();
       });
-  
-  
-      const loadTweets = function() {
-        $.get("/tweets", (data)=>{
-          $('#tweet-list').empty();
-          renderTweets(data);
-        });
-      };
     }
 
   });
+
+  loadTweets();
 
 });

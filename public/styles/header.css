@@ -7,7 +7,7 @@ The background-image should be a transparent pattern. Feel free to use this tool
 to assist: https://www.transparenttextures.com/ */
 
 .header {
-
+  padding: 1%;
   height: 400px;
   width: 100%;
   background-color: #e0a100;
